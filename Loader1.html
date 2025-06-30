@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .cont{
+        width: 120px;
+        height: 55px;
+        display: flex;
+        gap: 2px;
+        align-items: center;
+    }
+
+    .BOX1,.BOX2,.BOX3{
+        width:25px;
+        height:50px;
+        border-radius: 25px;
+        display: flex;
+        justify-content:space-evenly;
+        position: relative;
+    }
+    .BOX1{
+        background-color: #424242;
+    }
+    .BOX2{
+        background-color: #37474F;
+    }
+    .BOX3{
+        background-color: #263238;
+    }
+    .Ball1{
+        width:23px;
+        height: 23px;
+        background-color: #FF5252;
+        position: absolute;
+        animation-name:M1;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 1.25s;
+        animation-delay: 0s;
+        border-radius: 50%;
+        top:1px;
+    }
+    .Ball2{
+        width:23px;
+        height: 23px;
+        background-color: #00E5FF;
+        position: absolute;
+        border-radius: 50%;
+        animation-name:M1;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: 0.25s;
+        animation-duration: 1.25s;
+        top: 26px;
+    }
+    .Ball3{   
+        width:23px;
+        height: 23px;
+        background-color: #FFD600 ;
+        position: absolute;
+        border-radius: 50%;
+        animation-name:M1;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-delay: 0.50s;
+        animation-duration:1.25s;
+        top:1px;
+    }
+
+    @keyframes M1 {
+        0%{
+            top:1px;
+        }
+        25%{
+            top:13px;
+        }
+        50%{
+            top:26px;
+        }
+        75%{
+            top:13px;
+        }
+        100%{
+            top:1px;
+        }
+    }
+    </style>
+    <div class="cont">
+        <div class="BOX1">
+            <div class="Ball1" aria-hidden="true"></div>
+        </div>
+        <div class="BOX2">
+            <div class="Ball2"></div>
+        </div>
+        <div class="BOX3">
+            <div class="Ball3"></div>
+        </div>
+    </div>
+</body>
+</html>

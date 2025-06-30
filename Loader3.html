@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loader Animation</title>
+</head>
+<body>
+  <style>
+    .loader {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Box {
+    width: 20px;
+    height: 8px;
+    background-color: rgb(62, 132, 212);
+    animation: Loader 1s infinite ease;
+}
+
+.Box:nth-child(1) {
+    animation-delay: 0s;
+    background-color: #ff4b5c;
+}
+
+.Box:nth-child(2) {
+    animation-delay: 0.2s;
+    background-color: #ffb400;
+}
+
+.Box:nth-child(3) {
+    animation-delay: 0.4s;
+    background-color: #f9f871;
+}
+
+.Box:nth-child(4) {
+    animation-delay: 0.6s;
+    background-color: #3ae374;
+}
+
+.Box:nth-child(5) {
+    animation-delay: 0.8s;
+    background-color: #17c0eb;
+}
+
+@keyframes Loader {
+    0% { height: 0px; }
+    50% { height: 100px; }
+    100% { height: 0px; }
+}
+  </style>
+  <div class="loader">
+    <div class="Box"></div>
+    <div class="Box"></div>
+    <div class="Box"></div>
+    <div class="Box"></div>
+    <div class="Box"></div>
+  </div>
+</body>
+</html>
